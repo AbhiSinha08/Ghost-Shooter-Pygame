@@ -7,7 +7,7 @@ from random import randint
 spawn = [30, 500]
 bg = game.image.load('levels/bg1.jpg')
 enemy_intensity = 2
-enemy_count = 3
+enemy_count = 30
 enemy_speed = 3
 enemy = []
 active = []
