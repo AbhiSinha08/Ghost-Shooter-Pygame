@@ -5,5 +5,5 @@ Controls:
 	Spacebar for fire
 	
 Requirements:
+	```pip install -r requirements.txt```
 	Python 3.7 or newer
-	Pygame 2.0
