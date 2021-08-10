@@ -73,6 +73,10 @@ def loadLevel(n):
         global level
         if n == 1:
             import levels.level1 as level
+        elif n == 2:
+            import levels.level2 as level
+        elif n == 3:
+            import levels.level3 as level
         else:
             gameOver('Successfully Completed Game', 'More Levels to Come Soon!')
 
@@ -105,7 +109,10 @@ def gameOver(text, text2 = ''):
         overText2 = game.transform.scale(overText2, (600, 50))
         window.blit(overText2, (80, 100))
     game.display.flip()
-    data.set('saved', 'level', '1')
+    if text2:
+        data.set('saved', 'level', '1')
+    else:
+        data.set('saved', 'level', str(curLev))
     with open('gamedata.ini', 'w') as save:
         data.write(save)
     while True:
@@ -113,8 +120,10 @@ def gameOver(text, text2 = ''):
         for event in game.event.get():
             if event.type == game.QUIT:
                 exit()
+            if event.type == game.KEYDOWN:
+                exit()
 
-def playerMov(x, y):
+def playerMov(x, y): 
     player.moveHorizontal(x)
     player.moveVertical(y)
     player.bulletMove()

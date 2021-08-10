@@ -6,9 +6,9 @@ from random import randint
 
 spawn = [30, 500]
 bg = game.image.load('levels/bg1.jpg')
-enemy_intensity = 2
-enemy_count = 30
-enemy_speed = 2
+enemy_intensity = 3
+enemy_count = 50
+enemy_speed = 6
 enemy = []
 active = []
 enemy.append(game.image.load('graphics/enemy1.png')) # Icon made by "https://www.flaticon.com/authors/smashicons"
