@@ -6,7 +6,6 @@ except:
 import os
 from player import Player
 from configparser import ConfigParser as cfg
-os.chdir(__file__.replace(os.path.basename(__file__), ''))
 
 game.init()
 game.font.init()
